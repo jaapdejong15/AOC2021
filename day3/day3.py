@@ -27,10 +27,7 @@ def part2(data):
     answer = int(''.join(map(str, do_iterations(data, True))), 2) * int(''.join(map(str, do_iterations(data, False))), 2)
     print(f'Answer for part 2: {answer}')
 
-
-
 if __name__ == '__main__':
-
     input_data = parsing.file2data("../day3/input3.txt", lambda x : [int(i) for i in x.strip()])
     part1(input_data)
     part2(input_data)

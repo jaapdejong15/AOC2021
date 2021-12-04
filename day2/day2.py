@@ -29,9 +29,6 @@ def part2(data) :
     print(f'Answer for part 2: {horizontal_pos * depth}')
 
 
-
-
-
 if __name__ == '__main__':
     def parse_line(x : str):
         s = x.split()
