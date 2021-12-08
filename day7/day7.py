@@ -8,7 +8,7 @@ def part1(data):
 
 def part2(data):
     pos = int(sum(data) / len(data))
-    print(f'Answer for part 2: {sum(round(abs(pos - x) * (abs(pos - x) + 1) / 2) for x in data)}')
+    print(f'Answer for part 2: {min(sum(int(abs(pos - x + i) * (abs(pos - x + i) + 1) / 2) for x in data) for i in range(2))}')
 
 
 if __name__ == '__main__':
