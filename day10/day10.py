@@ -1,5 +1,3 @@
-from copy import copy
-
 import helper.parsing as parsing
 
 error_values = {')':3, ']':57, '}':1197, '>':25137}
@@ -9,11 +7,9 @@ def part1(data):
     total = 0
     incomplete_lines = []
     for line in data:
-        line_copy = copy(line)
         stack = []
         corrupted = False
-        while line:
-            char = line.pop(0)
+        for char in line:
             if char in ['(', '[', '{', '<']: stack.append(char)
             else:
                 matching_char = stack.pop()
@@ -21,7 +17,7 @@ def part1(data):
                     total += error_values[char]
                     corrupted = True
                     break
-        if not corrupted: incomplete_lines.append(line_copy)
+        if not corrupted: incomplete_lines.append(line)
     print(f'Answer for part 1: {total}')
     return incomplete_lines
 
