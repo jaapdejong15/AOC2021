@@ -4,16 +4,7 @@ from helper import parsing
 
 def part1(data):
     lower_x, upper_x, lower_y, upper_y = data
-    dy = -lower_y-1
-    y = 0
-    max_y = 0
-    while y >= lower_y:
-        y += dy
-        dy -= 1
-        if y > max_y: max_y = y
-        else:
-            print(f'Answer for part 1: {max_y}')
-            return
+    print(f'Answer for part 1: {int(((-lower_y-1) * (-lower_y)) / 2)}')
 
 def part2(data):
     lower_x, upper_x, lower_y, upper_y = data
