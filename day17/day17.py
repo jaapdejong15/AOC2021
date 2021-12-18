@@ -3,7 +3,7 @@ import re
 from helper import parsing
 
 def part1(data):
-    lower_x, upper_x, lower_y, upper_y = data
+    _, _, lower_y, _ = data
     print(f'Answer for part 1: {int(((-lower_y-1) * (-lower_y)) / 2)}')
 
 def part2(data):
